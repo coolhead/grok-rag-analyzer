@@ -205,4 +205,4 @@ if st.button("Analyze with Grok", type="primary"):
 
         st.bar_chart({"Total Words": [len(words)], "Long Words": [len(long_words)], "RAG Terms": [rag_score]}, height=400)
 
-        st.markdown("<br><hr><p style='text-align:center;color:#888;font-size:18px'>Made in INDIA with ❤️ by Raghavendra  SiIDDAPPA | Day 3 of GenAI Era</p>", unsafe_allow_html=True)
+        st.markdown("<br><hr><p style='text-align:center;color:#888;font-size:18px'>Made in INDIA with ❤️ by Raghavendra SIDDAPPA | Day 3 of GenAI Era</p>", unsafe_allow_html=True)
