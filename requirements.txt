@@ -1,4 +1,10 @@
-streamlit
-requests
-PyPDF2
+streamlit>=1.38.0
+langchain>=0.3.0
+langchain-community
+langchain-xai
+pypdf
 python-docx
+faiss-cpu
+tiktoken
+python-dotenv
+requests
