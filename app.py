@@ -1,16 +1,16 @@
 import streamlit as st
 import requests
 import time
-from pypdf import PdfReader                  
+from pypdf import PdfReader
 try:
-    from docx import Document                
+    from docx import Document
 except ImportError:
-    Document = None                          
+    Document = None
 
 API_KEY = st.secrets["API_KEY"]
 API_URL = "https://api.x.ai/v1/chat/completions"
-MODEL = "grok-beta"                         
-
+MODEL = "grok-3"
+#MODEL = "grok-3-mini"
 # === PREVENT STALE JS CACHE FOREVER ===
 st.query_params["ts"] = int(time.time())
 
@@ -71,6 +71,9 @@ uploaded_file = st.file_uploader(
 )
 
 question = None
+
+if uploaded_file and uploaded_file.size > 80_000_000:  # ~80 MB
+    st.warning("Very large file detected (>80 MB). Analysis may be slow or time out. Consider splitting the document.")
 
 if uploaded_file:
     with st.spinner("Extracting text from file..."):
