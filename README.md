@@ -1,11 +1,11 @@
-# Grok RAG-Aware Text Analyzer  
-**The world's most beautiful, fastest, and brutally honest document analyzer — powered by xAI's Grok-3 & Grok-3-mini**
+# RAG Text Analyzer + Incident CSV file Analysis ChatBot
+**The world's most beautiful, fastest, and brutally honest document analyzer — powered by xAI's Grok-3**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://grok-rag-analyzer.streamlit.app)  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]((https://smart-incident-bot.streamlit.app))  
 🔥 **Live Demo** →  [https://smart-incident-bot.streamlit.app/)](https://smart-incident-bot.streamlit.app)
 
 ## One-Click Document Analysis with SuperIntelligence
-Upload any PDF / DOCX / TXT (up to 200 MB) or just paste text → hit **"Analyze with Grok"** → in **3–7 seconds** you get:
+Upload any PDF / DOCX / TXT (up to 200 MB) or just paste text → hit **"Analyze"** → in **3–7 seconds** you get:
 
 - A deep, perfectly structured, hallucination-free summary & explanation  
 - Real-time **RAG Confidence Score** with glowing halo (85–99 % = HIGHLY GROUNDED)  
@@ -68,5 +68,5 @@ Next.js cyberpunk monster (no Streamlit limits)
 ### November 2025 — the month the world discovered true document superpowers.
 
 Star ★ this repo. Share the link. Let’s win the world together.
-https://grok-rag-analyzer.streamlit.app
-#GrokEra #RAGAware #BuiltWithGrok #IndianAI #CyberpunkAI
+[https://smart-incident-bot.streamlit.app](https://smart-incident-bot.streamlit.app)
+#GrokEra  #RAGAware #BuiltWithGrok #IndianAI #CyberpunkAI
