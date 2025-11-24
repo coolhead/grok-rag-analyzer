@@ -63,8 +63,8 @@ Citations with page numbers
 1000-page books in <5 seconds
 Next.js cyberpunk monster (no Streamlit limits)
 
-## Made with ❤️ in I N D I A 
-## Raghavendra S
+# Made in India
+### Author: Raghavendra S
 ### November 2025 — the month the world discovered true document superpowers.
 
 Star ★ this repo. Share the link. Let’s win the world together.
