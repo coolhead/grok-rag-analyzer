@@ -2,7 +2,7 @@
 **The world's most beautiful, fastest, and brutally honest document analyzer — powered by xAI's Grok-3 & Grok-3-mini**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://grok-rag-analyzer.streamlit.app)  
-🔥 **Live Demo** → https://grok-rag-analyzer.streamlit.app
+🔥 **Live Demo** →  [https://smart-incident-bot.streamlit.app/)](https://smart-incident-bot.streamlit.app)
 
 ## One-Click Document Analysis with SuperIntelligence
 Upload any PDF / DOCX / TXT (up to 200 MB) or just paste text → hit **"Analyze with Grok"** → in **3–7 seconds** you get:
