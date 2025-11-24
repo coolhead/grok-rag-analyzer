@@ -1,6 +1,7 @@
-# pages/chatbot.py  ← FINAL PRODUCTION VERSION (GROK + ANY CSV)
+# pages/chatbot.py  ← FINAL VERSION: AUTO TODAY'S DATE + FOREVER ACCURATE
 import streamlit as st
 import pandas as pd
+from datetime import datetime
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
@@ -34,23 +35,28 @@ Repeat: {row.get('Repeat', 'No')}"""
 
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vectorstore = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 6})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 8})  # increased for better date coverage
 
-    template = """You are an expert incident analyst. Answer using ONLY the context below.
-If unsure, say "I don't have enough information".
+    # AUTO TODAY'S DATE — NO HARDCODING!
+    today = datetime.now().strftime("%B %d, %Y")
+
+    template = f"""You are an expert incident analyst.
+Today's date is {today}. Use this to interpret "last 30 days", "this month", "last year", etc.
+
+Answer using ONLY the context below. If the question involves dates and you cannot confidently calculate it from the context, say "I don't have enough information".
 
 Context:
-{context}
+{{context}}
 
-Question: {question}
+Question: {{question}}
 Answer:"""
 
     prompt = ChatPromptTemplate.from_template(template)
 
     llm = ChatOpenAI(
         base_url="https://api.x.ai/v1",
-        api_key=st.secrets["API_KEY"],           # ← Your existing secret (unchanged)
-        model="grok-4-1-fast-reasoning",         # ← Correct, current model (Nov 2025)
+        api_key=st.secrets["API_KEY"],
+        model="grok-4-1-fast-reasoning",
         temperature=0
     )
 
@@ -64,7 +70,7 @@ Answer:"""
 
 # Load CSV
 df = pd.read_csv(uploaded_file)
-st.success(f"Loaded {len(df)} rows from {uploaded_file.name}")
+st.success(f"Loaded {len(df):,} rows from {uploaded_file.name}")
 
 rag_chain, retriever = build_rag_chain(df)
 
