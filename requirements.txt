@@ -8,3 +8,9 @@ faiss-cpu
 tiktoken
 python-dotenv
 requests
+
+langchain-ollama
+langchain-openai 
+faiss-cpu 
+sentence-transformers 
+streamlit-chat
