@@ -44,8 +44,8 @@ Answer:"""
     # Cloud-ready: Grok via OpenAI-compatible API (free tier)
     llm = ChatOpenAI(
         base_url="https://api.x.ai/v1",
-        api_key=st.secrets["GROK_API_KEY"],  # Pulled from Streamlit secrets
-        model="grok-beta",  # Or "grok-2-latest" for even better results
+        api_key=st.secrets["API_KEY"],  # Pulled from Streamlit secrets
+        model="grok-3",  # Or "grok-2-latest" for even better results
         temperature=0
     )
 
